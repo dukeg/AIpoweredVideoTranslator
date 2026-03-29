@@ -1,0 +1,74 @@
+.app {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.glow1 {
+  position: fixed;
+  top: -300px; left: 50%;
+  transform: translateX(-50%);
+  width: 800px; height: 600px;
+  background: radial-gradient(ellipse, rgba(124,106,247,.12) 0%, transparent 70%);
+  pointer-events: none; z-index: 0;
+}
+
+.glow2 {
+  position: fixed;
+  bottom: -200px; right: -100px;
+  width: 500px; height: 500px;
+  background: radial-gradient(ellipse, rgba(57,217,138,.06) 0%, transparent 70%);
+  pointer-events: none; z-index: 0;
+}
+
+.main {
+  position: relative; z-index: 1;
+  max-width: 860px; margin: 0 auto;
+  padding: 0 20px 80px;
+}
+
+/* Hero */
+.hero { text-align: center; padding: 60px 0 40px; }
+.badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 5px 14px; border: 1px solid rgba(124,106,247,.3);
+  border-radius: 100px; background: rgba(124,106,247,.08);
+  font-size: 10px; letter-spacing: 2px; color: var(--accent2);
+  font-family: var(--mono); margin-bottom: 20px;
+}
+.badgeDot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 8px var(--accent);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.heroTitle {
+  font-size: clamp(40px, 8vw, 72px);
+  font-weight: 800; line-height: 1.05;
+  letter-spacing: -2px; margin-bottom: 16px;
+  background: linear-gradient(135deg, #fff 40%, var(--accent2) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+
+.heroSub {
+  color: var(--text2); font-size: 16px; line-height: 1.6;
+  max-width: 520px; margin: 0 auto; font-family: var(--mono); font-weight: 300;
+}
+
+/* Feature cards */
+.features {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+  margin-top: 48px;
+}
+@media(max-width: 560px) { .features { grid-template-columns: 1fr; } }
+
+.featureCard {
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 18px 20px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--surface);
+  transition: border-color .2s;
+}
+.featureCard:hover { border-color: var(--border2); }
+.featureIcon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+.featureTitle { font-size: 14px; font-weight: 700; margin-bottom: 3px; }
+.featureDesc { font-size: 12px; color: var(--text2); font-family: var(--mono); line-height: 1.4; }

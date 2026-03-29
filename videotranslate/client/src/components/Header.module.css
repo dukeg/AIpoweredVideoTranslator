@@ -1,0 +1,36 @@
+.header {
+  position: sticky; top: 0; z-index: 100;
+  border-bottom: 1px solid var(--border);
+  background: rgba(6,6,8,.85);
+  backdrop-filter: blur(16px);
+}
+.inner {
+  max-width: 860px; margin: 0 auto;
+  padding: 0 20px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 58px;
+}
+.logo { display: flex; align-items: center; gap: 10px; }
+.logoIcon {
+  width: 32px; height: 32px;
+  background: var(--surface); border: 1px solid var(--border2);
+  border-radius: 8px; display: flex; align-items: center; justify-content: center;
+  color: var(--text2);
+}
+.logoText { font-weight: 800; font-size: 16px; letter-spacing: -.5px; }
+.logoAi { color: var(--accent); }
+.nav { display: flex; align-items: center; gap: 4px; }
+.navLink {
+  padding: 6px 12px; color: var(--text2); text-decoration: none;
+  font-size: 12px; border-radius: 6px; font-family: var(--mono);
+  transition: color .2s, background .2s;
+}
+.navLink:hover { color: var(--text); background: var(--surface); }
+.navBtn {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 14px; background: var(--surface2);
+  border: 1px solid var(--border2); border-radius: 6px;
+  color: var(--text); text-decoration: none; font-size: 12px;
+  font-family: var(--mono); transition: border-color .2s, background .2s;
+}
+.navBtn:hover { border-color: var(--accent); background: rgba(124,106,247,.08); }
